@@ -40,12 +40,35 @@ export class LoginComponent implements OnInit {
   }   
 
 
- login(){
+//  login(){
+
+//   //defining a var inside fn to hold user enter acno number it is class
+
+//   var acno= this.acno
+//   var pswd=this.pswd
+//      let userdetails=this.userDetails// assigning the userdetails to a var o.w always we need to call
+//      // this. userDetails sinec it is a class obj
+//       if (acno in userdetails){
+
+//         if(pswd == userdetails[acno]['password']){
+//           alert('login successful')
+
+//         }
+//         else{
+//           alert('Incorrect pasword')
+//         }
+
+//       }
+//       else{
+//         alert('user doesnt exist')
+//       }
+//  }
+login(a:any,p:any){
 
   //defining a var inside fn to hold user enter acno number it is class
 
-  var acno= this.acno
-  var pswd=this.pswd
+  var acno= a.value
+  var pswd=p.value
      let userdetails=this.userDetails// assigning the userdetails to a var o.w always we need to call
      // this. userDetails sinec it is a class obj
       if (acno in userdetails){
@@ -64,3 +87,4 @@ export class LoginComponent implements OnInit {
       }
  }
 }
+
